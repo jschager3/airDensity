@@ -1,6 +1,6 @@
 /**
  * Authors: Jacob and Levi
- * 
+ *
  * Date:    2022/09/01
  *
  * Porgram to measure the distance between two locations
@@ -14,14 +14,11 @@
 int main(int argc, char **argv){
 
     double lat01, long01, lat02, long02;
-    printf("Please enter the latitude of your origin: \n");
-    scanf("%lf", &lat01);
-    printf("Please enter the longitude of your origin: \n");
-    scanf("%lf", &long01);
 
-    printf("Please enter the latitude of your destination: \n");
+    /* Takes in latitde and Longitude of orgin and destination */
+    scanf("%lf", &lat01);
+    scanf("%lf", &long01);
     scanf("%lf", &lat02);
-    printf("Please enter the longitude of your destination: \n");
     scanf("%lf", &long02);
 
     /* Radius of the Earth */
@@ -37,8 +34,8 @@ int main(int argc, char **argv){
     double d = acos(sin(latRadian01) * sin(latRadian02) + cos(latRadian01) * cos(latRadian02) * cos(longRadian02 - longRadian01));
     double distance = d * r;
 
-    printf("Origin:         %lf, %lf \n", lat01, long01);
-    printf("Destination:    %f, %lf \n", lat02, long02);
+    printf("Origin:         (%lf, %lf) \n", lat01, long01);
+    printf("Destination:    (%f, %lf) \n", lat02, long02);
     printf("Air distance is %lf Kms \n", distance);
 
 }
